@@ -2,9 +2,23 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include "swap.h"
+#include "func.h"
+
 using namespace std;
 
+typedef struct 
+{
+    string name_stu;
+    int score;
+}stu_info_t;
+typedef struct 
+{
+    string name_tec;
+    stu_info_t stu[5];
+}tec_info_t;
+
+void data_change(tec_info_t *tec, int len);
+void printfinfo(tec_info_t *tec, int len);
 int main()
 {
     // int a = 10;
@@ -172,6 +186,56 @@ int main()
     // const int *pp = &a;
     // *pp = 20;//有问题
     // pp = &b;//没问题
+
+    tec_info_t tec[3];
+    data_change(tec, 3);
+
+    
     system("pause");
     return 0;
+}
+
+void data_change(tec_info_t *tec, int len)
+{
+    for(int i = 0; i < len; i++)
+    {
+        cout << "请输入第" << i+1 << "位老师的姓名：" << endl;
+        cin >> tec[i].name_tec;
+        cout << "请依次输入第" << i+1 
+                << "位老师的5名学生的姓名：" << endl;
+        for(int j = 0; j < 5; j++ )
+        {
+            cin >> tec[i].stu[j].name_stu;
+        }
+        cout << "请依次输入第" << i+1 
+                << "老师的5位学生的成绩：" << endl;
+        for(int j = 0; j < 5; j++ )
+        {
+            cin >> tec[i].stu[j].score;
+        }
+    }
+    printfinfo(tec, len);
+    
+}
+void printfinfo(tec_info_t *tec, int len)
+{
+    for(int i = 0; i < len; i++)
+    {
+        cout << "第" << i+1 << "位老师的姓名为：" 
+                << tec[i].name_tec << endl;
+        cout << "第" << i+1 
+                << "老师的5名学生的姓名依次为：" << endl;
+        for(int j = 0; j < 5; j++ )
+        {
+            cout << tec[i].stu[j].name_stu << "\t";
+        }
+        cout << endl;
+        cout << "第" << i+1 
+                << "老师的五名学生的成绩为：" << endl;
+        for(int j = 0; j < 5; j++ )
+        {
+            cout << tec[i].stu[j].score << "\t";
+        }
+        cout << endl;
+    }
 }
