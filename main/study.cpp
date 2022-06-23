@@ -187,10 +187,12 @@ int main()
     // *pp = 20;//有问题
     // pp = &b;//没问题
 
-    tec_info_t tec[3];
-    data_change(tec, 3);
+    // tec_info_t tec[3];
+    // data_change(tec, 3);
+
 
     
+
     system("pause");
     return 0;
 }
