@@ -17,7 +17,11 @@
         "sstream": "cpp",
         "streambuf": "cpp",
         "tuple": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "bitset": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "random": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
