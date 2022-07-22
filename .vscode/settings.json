@@ -21,7 +21,8 @@
         "bitset": "cpp",
         "iosfwd": "cpp",
         "new": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "algorithm": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
