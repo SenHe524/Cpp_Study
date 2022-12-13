@@ -41,7 +41,13 @@ point:: point(const point &p_temp)
     y = p_temp.y;
     cout << "point ¿½±´¹¹Ôìº¯Êý£¡" << endl;
 }
-
+void func1(){
+    cout << "func1" << endl;
+}
+void func2()
+{
+    func1();
+}
 
 point:: ~point()
 {

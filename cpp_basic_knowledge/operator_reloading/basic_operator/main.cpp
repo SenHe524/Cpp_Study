@@ -11,13 +11,13 @@ public:
     int a;
     int b;
     //成员函数实现加号运算符重载
-    // person operator+(person &p)
-    // {
-    //     person p_temp;
-    //     p_temp.a = this->a + p.a;
-    //     p_temp.b = this->b + p.b;
-    //     return p_temp;
-    // }
+    person operator+(person &p)
+    {
+        person p_temp;
+        p_temp.a = this->a + p.a;
+        p_temp.b = this->b + p.b;
+        return p_temp;
+    }
     //成员函数实现减号运算符重载
     person operator-(person &p)
     {
@@ -43,14 +43,14 @@ public:
         return p_temp;
     }
 };
-//全局函数实现运算符重载
-person operator+(person &p1, person &p2)
-{
-    person p_temp;
-    p_temp.a = p1.a + p2.a;
-    p_temp.b = p1.b + p2.b;
-    return p_temp;
-}
+// //全局函数实现运算符重载
+// person operator+(person &p1, person &p2)
+// {
+//     person p_temp;
+//     p_temp.a = p1.a + p2.a;
+//     p_temp.b = p1.b + p2.b;
+//     return p_temp;
+// }
 void test(){
 
     person p1;
@@ -63,9 +63,9 @@ void test(){
     //成员函数
     person p3 = p1 + p2;
     cout << p3.a << "  " << p3.b << endl;
-    // 全局函数
-    person p7 = p1 + p2;
-    cout << p7.a << "  "<< p7.b << endl;
+    // // 全局函数
+    // person p7 = p1 + p2;
+    // cout << p7.a << "  "<< p7.b << endl;
 
 
 

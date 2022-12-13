@@ -54,7 +54,7 @@ void constructor()
     //注：不要用 拷贝构造函数 初始化 匿名对象
     //如：point(p2); 
     //此时编译会提示p2重定义，编译器会将point(p2);理解为 point p2;
-    
+    p3.func2();
 
     point p_r;
     

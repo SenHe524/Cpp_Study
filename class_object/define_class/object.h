@@ -15,6 +15,8 @@ public:
     point();
     point(int x_temp, int y_temp);
     point(const point &p_temp);
+    void func1();
+    void func2();
     ~point();
 };
 

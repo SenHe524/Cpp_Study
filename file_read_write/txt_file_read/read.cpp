@@ -4,26 +4,26 @@
 using namespace std;
 
 /*
-ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£º
-1.ofstream:Ð´ï¿½ï¿½ï¿½ï¿½
-2.ifstream:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-3.fstream:ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
+²Ù×÷ÎÄ¼þÈý´óÀà£º
+1.ofstream:Ð´²Ù×÷
+2.ifstream:¶Á²Ù×÷
+3.fstream:¶ÁÐ´²Ù×÷
 */
 
 /*
-ï¿½Ä±ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½è£º
-1.ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½ï¿½ #include <fstream>
-2.ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ifstream ifs;
-3.ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½isf.open("ï¿½Ä¼ï¿½Â·ï¿½ï¿½",ï¿½ò¿ª·ï¿½Ê½);
-ï¿½ò¿ª·ï¿½Ê½ï¿½ï¿½
-ios::in     :Îªï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-ios::out    :ÎªÐ´ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-ios::ate    :ï¿½ï¿½Ê¼Î»ï¿½Ã£ï¿½ï¿½Ä¼ï¿½Î²
-ios::app    :×·ï¿½Ó·ï¿½Ê½Ð´ï¿½Ä¼ï¿½
-ios::trunc  :ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½
-ios::binary :ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½Ê½
-4.ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½Ý·ï¿½Ê½
-5.ï¿½Ø±ï¿½ï¿½Ä¼ï¿½: ifs.close();
+¶ÁÎÄ¼þ²½Öè£º
+1.°üº¬Í·ÎÄ¼þ£º#include <fstream>
+2.´´½¨Á÷¶ÔÏó£ºifstream ifs;
+3.´ò¿ªÎÄ¼þ£ºisf.open("ÎÄ¼þÂ·¾¶",´ò¿ª·½Ê½);
+´ò¿ª·½Ê½
+ios::in     :Îª¶ÁÎÄ¼þ¶ø´ò¿ªÎÄ¼þ
+ios::out    :ÎªÐ´ÎÄ¼þ¶ø´ò¿ªÎÄ¼þ
+ios::ate    :³õÊ¼ÎªÖ¹£ºÎÄ¼þÎ²
+ios::app    :×·¼Ó·½Ê½Ð´ÎÄ¼þ
+ios::trunc  :Èç¹ûÎÄ¼þ´æÔÚ£¬ÏÈÉ¾³ý£¬ÔÙ´´½¨
+ios::binary :¶þ½øÖÆ·½Ê½
+4.ËÄÖÖ·½Ê½¶ÁÈ¡Êý¾Ý
+5.¹Ø±ÕÎÄ¼þ: ifs.close();
 */
 
 void test()
@@ -33,14 +33,14 @@ void test()
     ifs1.open("E:/DeskTop/Code/C++/file_read_write/txt_file_read/test.txt", ios::in);
     if(!ifs1.is_open())
     {
-        cout << "ï¿½ï¿½ï¿½Ä¼ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½é£¡" << endl;
+        cout << "´ò¿ªÎÄ¼þÊ§°Ü" << endl;
         return ;
     }
-    //ï¿½ï¿½Ò»ï¿½ï¿½
+    //µÚÒ»ÖÖ·½Ê½
     char buf_1[1024] = {0};
     while(ifs1 >> buf_1)
     {
-        cout << "ï¿½ï¿½Ò»ï¿½ï¿½" << buf_1 << endl;
+        cout << buf_1 << endl;
     }
     cout << endl;
 
@@ -48,14 +48,14 @@ void test()
     ifs2.open("E:/DeskTop/Code/C++/file_read_write/file_read/test.txt", ios::in);
     if(!ifs2.is_open())
     {
-        cout << "ï¿½ï¿½ï¿½Ä¼ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½é£¡" << endl;
+        cout << "´ò¿ªÎÄ¼þÊ§°Ü" << endl;
         return ;
     }
-    // ï¿½Ú¶ï¿½ï¿½ï¿½
+    // µÚ¶þÖÖ·½Ê½
     char buf_2[1024] = {0};
     while(ifs2.getline(buf_2, sizeof(buf_2)))
     {
-        cout << "ï¿½Ú¶ï¿½ï¿½ï¿½" << buf_2 << endl;
+        cout << buf_2 << endl;
     }
     cout << endl;
     
@@ -63,14 +63,14 @@ void test()
     ifs3.open("E:/DeskTop/Code/C++/file_read_write/file_read/test.txt", ios::in);
     if(!ifs3.is_open())
     {
-        cout << "ï¿½ï¿½ï¿½Ä¼ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½é£¡" << endl;
+        cout << "´ò¿ªÎÄ¼þÊ§°Ü" << endl;
         return ;
     }
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // µÚÈýÖÖ·½Ê½
     string buf_3;
     while(getline(ifs3, buf_3))
     {
-        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << buf_3 << endl;
+        cout << buf_3 << endl;
     }
     cout << endl;
 
@@ -78,10 +78,10 @@ void test()
     ifs4.open("E:/DeskTop/Code/C++/file_read_write/file_read/test.txt", ios::in);
     if(!ifs4.is_open())
     {
-        cout << "ï¿½ï¿½ï¿½Ä¼ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½é£¡" << endl;
+        cout << "´ò¿ªÎÄ¼þÊ§°Ü" << endl;
         return ;
     }
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // µÚËÄÖÖ·½Ê½
     char c;
     while((c = ifs4.get()) != EOF)// EOF: End Of File
     {
